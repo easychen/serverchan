@@ -2,7 +2,7 @@ var req = require('request');
 
 function ServerChan({key = "", text="testTitle", desp="testDesp"}){
 	return new Promise((resolv, reject) => {
-		req.get(encodeURI(`https://sc.ftqq.com/${key}.send?text=${text}&desp=${desp}`),
+		req.get(encodeURI(`https://sctapi.ftqq.com/${key}.send?text=${text}&desp=${desp}`),
 		  (e,r,b) => {
 	  		if(e) {
 	  			reject(e);
